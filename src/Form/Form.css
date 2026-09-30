@@ -1,0 +1,83 @@
+.form {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-content {
+    background-color: #171d25;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid #f3f6f933;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #f3f6f933;
+    border-radius: 10px;
+    background: #0e1217;
+    color: #f3f6f9;
+    outline: none;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #5eead4;
+  }
+  
+  input::placeholder {
+    color: #f3f6f966;
+  }
+  
+  select option {
+    background: #0e1217;
+    color: #f3f6f9;
+  }
+  
+  button[type="submit"] {
+    margin-top: 4px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #5eead4;
+    color: #0e1217;
+    font-weight: 600;
+  }
+  
+  button[type="submit"]:hover {
+    opacity: 0.9;
+  }
+
+  .form-title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-err {
+    min-height: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fb7185;
+    text-align: center;
+    opacity: .9;
+  }
+
+  .form-submit {
+    margin-top: 24px;
+  }
+  
