@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.css";
+import { Dropdown } from "../Dropdown";
 
 export const Form = ({ onAdd }) => {
   const [amount, setAmount] = useState("");
@@ -7,6 +8,13 @@ export const Form = ({ onAdd }) => {
   const [note, setNote] = useState("");
   const [date, setDate] = useState("");
   const [err, setErr] = useState({});
+
+  const categoryOptions = [
+    { value: "food", label: "food" },
+    { value: "transport", label: "transport" },
+    { value: "home", label: "home" },
+    { value: "other", label: "other" },
+  ];
 
   const validate = () => {
     const next = {};
@@ -83,15 +91,12 @@ export const Form = ({ onAdd }) => {
             </div>
 
             <div className="field">
-              <select
+              <Dropdown
+                options={categoryOptions}
                 value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                <option value="food">food</option>
-                <option value="transport">transport</option>
-                <option value="home">home</option>
-                <option value="other">other</option>
-              </select>
+                onChange={setCategory}
+                placeholder="category"
+              />
             </div>
             <p className="form-err"></p>
 
@@ -114,7 +119,9 @@ export const Form = ({ onAdd }) => {
               />
               <p className="form-err">{err.date || " "}</p>
             </div>
-            <button className="form-submit" type="submit">add ➕</button>
+            <button className="form-submit" type="submit">
+              add ➕
+            </button>
           </form>
         </div>
       </div>

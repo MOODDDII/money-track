@@ -1,0 +1,82 @@
+.dropdown {
+  width: 100%;
+
+  --ss-primary-color: #5eead4;
+  --ss-bg-color: #0e1217;
+  --ss-font-color: #f3f6f9;
+  --ss-placeholder-color: #f3f6f966;
+  --ss-disabled-color: #171d25;
+  --ss-border-color: #f3f6f933;
+  --ss-focus-color: #5eead4;
+  --ss-highlight-color: #5eead433;
+  --ss-border-radius: 10px;
+  --ss-main-height: 42px;
+  --ss-content-height: 220px;
+  --ss-option-height: auto;
+}
+
+.dropdown .ss-main {
+  width: 100%;
+  height: 50px;
+  padding: 0 12px;
+  border: 1px solid var(--ss-border-color);
+  border-radius: var(--ss-border-radius);
+  background-color: var(--ss-bg-color);
+  color: var(--ss-font-color);
+  min-height: var(--ss-main-height);
+  box-shadow: none;
+}
+
+.dropdown .ss-main:focus,
+.dropdown .ss-main.ss-open-below,
+.dropdown .ss-main.ss-open-above {
+  border-color: var(--ss-focus-color);
+  box-shadow: none;
+}
+
+.dropdown .ss-arrow path {
+  stroke: #5eead4;
+}
+
+.dropdown .ss-values .ss-single {
+  color: #f3f6f9;
+}
+
+.dropdown .ss-placeholder {
+  color: #f3f6f966;
+}
+
+.dropdown .ss-content {
+  background-color: #171d25;
+  border: 1px solid #f3f6f933;
+  border-radius: 12px;
+  margin-top: 6px;
+  color: #f3f6f9;
+}
+
+.dropdown .ss-list {
+  background-color: #171d25;
+}
+
+.dropdown .ss-option {
+  background-color: #171d25;
+  color: #f3f6f9;
+  padding: 10px 12px;
+}
+
+.dropdown .ss-option:hover,
+.dropdown .ss-option.ss-highlighted {
+  background-color: #0e1217 !important;
+  color: #5eead4 !important;
+}
+
+.dropdown .ss-option.ss-selected,
+.dropdown .ss-option:not(.ss-disabled).ss-selected {
+  background-color: #0e1217 !important;
+  color: #5eead4 !important;
+}
+
+.dropdown .ss-option.ss-disabled {
+  background-color: #171d25;
+  color: #f3f6f966;
+}
